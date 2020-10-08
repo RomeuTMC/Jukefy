@@ -1,0 +1,38 @@
+{
+    "application": {
+        "single_instance_guid": "",
+    },
+    "main_window": {
+        "title": "Jukefy JukeBox",
+        "icon": "app.png",
+        "default_size": [1024, 768],
+        "center_on_screen": true,
+    },
+    "web_server": {
+        "listen_on": ["127.0.0.1", 0],
+        "www_directory": "resources",
+        "index_files": ["main.php"],
+        "cgi_interpreter": "cgi",
+        "cgi_extensions": ["php"],
+        "404_handler": "/pretty.php",
+        "hide_files": []
+    },
+    "chrome": {
+        "log_file": "debug.log",
+        "log_severity": "default",
+        "cache_path": "cache",
+        "remote_debugging_port": 0,
+        "command_line_switches": {
+            "enable-media-stream": "",
+            "enable-system-flash": ""
+        },
+        "enable_downloads": true,
+        "context_menu": {
+            "enable_menu": false,
+            "navigation": false,
+            "print": false,
+            "view_source": false,
+            "devtools": true
+        }
+    }
+}
