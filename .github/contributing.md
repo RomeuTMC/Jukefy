@@ -62,12 +62,29 @@ Usamos como convenção, que o primeiro ou primeiros caractere do nome da variá
 | _s | Static - Escopo | Usado para métodos estáticos |
 | _p | Public - Escopo | Usado para Métodos públicos |
 
-### Identação e padrões de codificação
+### Padrões de codificação - Identação e Boas Práticas
+Você é livre para utilizar o código da maneira que preferir, e utilizar os padrões e nomenclaturas e realizar uma cópia (fork) do projeto adaptando-o ao seu estilo, desde que siga as diretrizes da licença, e mantenha os créditos de cada autor em cada parte do código utilizado.
+
+Quando você estiver fazendo alguma edição, que possa ser submetida ao repositório oficial através de um pull request, seguimos alguns padrões, também não só de nomenclatura, como algumas regras para melhorar o fluxo de trabalho da equipe. São eles:
+
 - Desenvolva apenas em seu branch. 
 - Faça rebase com o master antes de criar pull requests.
-- Faça rebase do master em seu branch diariamente.
+- Faça rebase do master em seu branch diariamente, ou sempre que finalizar uma edição.
 - Faça squash dos seus commits que não estão completos (Work In Progress).
 
+Quando você estiver codificando, não idente (recue) o código usando tabulação (configure para substituir a tabulação por 3 espaços), dessa maneira seu código fica legível e dentro dos principais padrões aceitos.
+
+Não use underscore (_) fora do nome de constantes. Nem nome de variavel igual a nome de função ou de constantes nem use palavras em idiomas diferentes, convencionamos que as variavéis, constantes e nomes de funções e métodos são escritos em portugues sem acentuação gráfica. Porém, aceitamos seus nomes em Inglês como um segundo idioma.
+
+Use uma linha em branco, para espaçar o inicio/fim de uma função, método ou classe dentro de um mesmo arquivo fonte. Da mesma maneira, coloque em um mesmo arquivo conteúdos relacionados, agrupados pela funcionalidade ou racionalidade.
+
+Evite funções que repitam o código, se existe alguma repetição, pense em refatorar o código, e não sobrecarregar uma determinada função.
+
+Evite uso de retornos e tipos null (nulos) prefira uso de valores como false. Em exceções, use as clausulas de finalização para fechar buffers de saida, conexões abertas e mesmo entrada e saída em arquivos.
+
+Utilize sempre os recursos das versões mais recentes do repositório estable das linguagens, e de outros recursos, evite a utilização de versões antigas e versões beta ou futuras.
+
+Testes e depuração fazem parte e devem estar presentes em todas as funcionalidades.
 
 ## Documentando o código
 Quando for documentar o seu código, o faça no próprio corpo do arquivo, utilize um cabeçalho, onde todas as funções, autor, requisitos sejam claros. Utilize os comentários de linha e de bloco para colocar comentários no meio de um código.
@@ -75,6 +92,13 @@ Quando for documentar o seu código, o faça no próprio corpo do arquivo, utili
 Todos nós pensamos que nosso código faz sentido - especialmente se ele funcionar - mas outra pessoa talvez não. Para combater isso, todos nós precisamos melhorar os comentários do código-fonte. Dessa forma, quem vier acompanhar o projeto terá um caminho claro para entender e melhorar / consertar nosso código. Os princípios básicos de comentar seu código são simples: Faça-os breves; Mantenha-os relevantes; Use-os liberalmente, mas não em excesso; Se você puder manter isso em mente, você estará indo muito bem.
 
 Os principais são que nem sempre você será o único trabalhando no projeto, e você não pode garantir o quão experiente a próxima pessoa será. Mesmo se você escrever um bom código, há uma chance de confusão e ambiguidade.
+
+### Crie Tutoriais
+Caso tenha adicionado uma funcionalidade, crie tutoriais para ensinar como instalar, utilizar e os recursos dessa funcionalidade.
+
+Se criou uma API, não se esqueça de colocar na documentação, e adicionar exemplos de chamadas em algumas linguagens, utilização de parâmetros e opcionais.
+
+Como padrão, utilizamos as ferramentas do [POSTMAN API Documentation Tool](https://www.postman.com/api-documentation-tool/). Para criar os exemplos de chamadas e as documentações para a API's em geral.
 
 ### Documentação do Bloco de Cabeçalho e Comentários
 Se você olhar em alguns arquivos, o código não começa imediatamente porque há um grande cabeçalho no arquivo que descreve qual é o seu propósito, autores, datas e detalhes simples. Mantenha a coerência e seja básico. Comentários de cabeçalho são úteis no código-fonte para explicações simples sobre o que esperar desse arquivo.
