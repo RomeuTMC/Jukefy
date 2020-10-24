@@ -1,0 +1,1 @@
+﻿<a href=main.php class='btn btn-primary'>RELOAD</a>
